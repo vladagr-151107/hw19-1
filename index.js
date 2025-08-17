@@ -1,7 +1,6 @@
 const city = "Odesa";
-let temperature = null;
 function updateCurrentTime(){
-    let now = new Date();
+    const now = new Date();
     let hours = now.getHours();
     if(hours < 10){
         hours = `0${hours}`;
@@ -10,17 +9,17 @@ function updateCurrentTime(){
     if(minutes < 10){
         minutes = `0${minutes}`;
     }
-    let currentDay = now.getDate();
+    const currentDay = now.getDate();
     const days = [ "Sunday", "Monday", "Tuesday", "Wednesday",
  "Thursday", "Friday", "Saturday",];
- let months = ["Jan","Feb","Mar", "Apr","May","Jun","Jul",
+ const months = ["Jan","Feb","Mar", "Apr","May","Jun","Jul",
     "Aug","Sep","Oct","Nov","Dec",
   ];
   const month = months[now.getMonth()];
   const day = days[now.getDay()];
   const year = now.getFullYear();
-  let dateElement = document.getElementById('date');
-  let timeElement = document.getElementById('time');
+  const dateElement = document.getElementById('date');
+  const timeElement = document.getElementById('time');
   if(dateElement){
     dateElement.innerHTML = `${month} ${currentDay}, ${year} - ${day}`;
   }
